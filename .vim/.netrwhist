@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/site/mesa/org-seg-projects-ibiza-mesa-dv-cpu-users-felsabbagh-scratch1/felsabbagh_ibiza_delta.Wtmp/ibiza/trunk/acc/tb/cdm/verif/perfdv/llc_aflat_check/src'
+let g:netrw_dirhist_2='/site/mesa/org-seg-projects-ibiza-mesa-dv-cpu-users-felsabbagh-scratch1/felsabbagh_ibiza_delta.Wtmp/ibiza/trunk/acc/tb/cdm/verif/perfdv/llc_aflat_check'
+let g:netrw_dirhist_3='/site/mesa/org-seg-projects-ibiza-mesa-dv-cpu-users-felsabbagh-scratch1/felsabbagh_ibiza_delta.Wtmp/ibiza/trunk/acc/tb/cdm/verif/perfdv/llc_aflat_check/verilog'
