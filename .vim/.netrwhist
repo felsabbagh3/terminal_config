@@ -1,5 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/site/mesa/org-seg-projects-ibiza-mesa-dv-cpu-users-felsabbagh-scratch1/felsabbagh_ibiza_delta.Wtmp/ibiza/trunk/acc/tb/cdm/verif/perfdv/llc_aflat_check/src'
-let g:netrw_dirhist_2='/site/mesa/org-seg-projects-ibiza-mesa-dv-cpu-users-felsabbagh-scratch1/felsabbagh_ibiza_delta.Wtmp/ibiza/trunk/acc/tb/cdm/verif/perfdv/llc_aflat_check'
-let g:netrw_dirhist_3='/site/mesa/org-seg-projects-ibiza-mesa-dv-cpu-users-felsabbagh-scratch1/felsabbagh_ibiza_delta.Wtmp/ibiza/trunk/acc/tb/cdm/verif/perfdv/llc_aflat_check/verilog'
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/data/sanchez/users/farese/git/verilator/examples/make_hello_c'
+let g:netrw_dirhist_7='/data/sanchez/users/farese/git/verilator/examples/make_hello_c/obj_dir'
+let g:netrw_dirhist_6='/data/sanchez/users/farese/git/verilator/examples/make_hello_c'
+let g:netrw_dirhist_5='/data/sanchez/users/farese/git/verilator/examples/make_protect_lib'
+let g:netrw_dirhist_4='/data/sanchez/users/farese/git/verilator/examples'
+let g:netrw_dirhist_3='/data/sanchez/users/farese/git/verilator/examples/make_hello_c'
+let g:netrw_dirhist_2='/data/sanchez/users/farese/git/verilator/examples'
+let g:netrw_dirhist_1='/data/sanchez/users/farese/git/verilator/examples/make_hello_c'
+let g:netrw_dirhist_0='/data/sanchez/users/farese/git/verilator/examples/make_hello_c/obj_dir'
+let g:netrw_dirhist_9='/data/sanchez/users/farese/git/verilator/examples/make_hello_c'

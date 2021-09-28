@@ -30,8 +30,8 @@ set ignorecase
 set smartcase
 
 "set listchars=eol:?,tab:>?,trail:~,extends:>,precedes:<,space:_
-set list
-
+"set list
+set noswapfile
 """" Key Bindings
 
 " move vertically by visual line (don't skip wrapped lines)
@@ -67,7 +67,7 @@ filetype plugin indent on
 """" Tab settings
 
 set tabstop=4           " width that a <TAB> character displays as
-"set expandtab           " convert <TAB> key-presses to spaces
+set expandtab           " convert <TAB> key-presses to spaces
 set shiftwidth=4        " number of spaces to use for each step of (auto)indent
 set softtabstop=4       " backspace after pressing <TAB> will remove up to this many spaces
 
@@ -81,8 +81,6 @@ set nowrap
 set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
 
-" turn off search highlighting with <CR> (carriage-return)
-nnoremap <CR> :nohlsearch<CR><CR>
 
 
 "res +10
@@ -92,7 +90,7 @@ nnoremap <CR> :nohlsearch<CR><CR>
 
 """" Miscellaneous settings that might be worth enabling
 
-"set cursorline         " highlight current line
+set cursorline         " highlight current line
 "set autoread           " autoreload the file in Vim if it has been changed outside of Vim
 
 nnoremap <CR> :noh<CR>
@@ -104,13 +102,20 @@ set path+=**
 set wildmenu
 set nocompatible
 
-command! MakeTags !ctags -R .
+command! MakeTags !ctags -R --extra=+q --fields=+i .
 nnoremap <C-j> :bprev<CR>                                                                            
 nnoremap <C-k> :bnext<CR>
 
-nnoremap <C-Left> :tabprevious<CR>                                                                            
-nnoremap <C-Right> :tabnext<CR>
+nnoremap <C-n> :tabprevious<CR>                                                                            
+nnoremap <C-m> :tabnext<CR>
 
+nnoremap <C-a> :Tabularize //l1r0<left><left><left><left><left>
+vnoremap <C-a> :Tabularize //l1r0<left><left><left><left><left>
+nnoremap <C-e> :Tabularize //l1r1<left><left><left><left><left>
+vnoremap <C-e> :Tabularize //l1r1<left><left><left><left><left>
+
+" turn off search highlighting with <CR> (carriage-return)
+nnoremap <CR> :nohlsearch<CR><CR>
 
 nmap ,n :call setreg('a', line('.'))<CR>
 
@@ -121,3 +126,16 @@ inoremap "      ""<Left>
 inoremap '      ''<Left>
 
 vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>''")
+
+let mapleader = ","
+" opens search results in a window w/ links and highlight the matches
+"command! -nargs=+ Grep execute 'silent grep! -I -r -n --exclude *.{json,pyc} . -e <args>' | copen | execute 'silent /<args>'
+" shift-control-* Greps for the word under the cursor
+":nmap <leader>g :Grep <c-r>=expand("<cword>")<cr><cr>
+
+:nmap <leader>g :vimgrep  **/*<left><left><left><left><left>
+
+"Paste Mode:
+:nmap <leader>p :set paste<cr>
+:nmap <leader>P :set nopaste<cr>
+
